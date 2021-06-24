@@ -807,18 +807,18 @@ function sendDataToServer(survey) {
 					for (i = 0; i < data.question2.length; i++) {
 					var q = data.question2[i];
 						console.log(q);
-                    $.post( "https://docs.google.com/forms/u/0/d/e/1FAIpQLSdR7aTfCEfNefriSXpmKD6ccLT6QEVbGXtnGVoAWiig7w6MSA/formResponse",
+                    $.post( "https://https://docs.google.com/forms/d/e/1FAIpQLSdsEHSC4psFMeW9HbVfro5_M2MiqCFFhAbXxccmo0uSUztzGw/viewform",
                     {
-                    "entry.2081806952": data.date,
-					"entry.1997249446": data.peeoName,
-					"entry.1341436243": data.RevenueVillage ,
-					"entry.1022373984": q["Family"],
-					"entry.791177180": q["कुल परिवारों की संख्या"],
-					"entry.510921074": q["सर्वे में समिल्लत कुल परिवारों की संख्या"],
-					"entry.2111580312": q["सर्वे में चिन्हित विद्यालय में प्रवेश योग्य बच्चो की संख्या"],
-					"entry.1681330709": q["सर्वे में चिन्हित आंगन बाड़ी  में प्रवेश योग्य बच्चो की संख्या"],
-					"entry.79184850": q["आंगन बाड़ी से विद्यालय कि प्रथम कक्षा में प्रवेश योग्य बच्चो की संख्या"],
-					"entry.51442607": q["सर्वे में चिन्हित उपरोक्त सभी में cwsn प्रवेश योग्य बच्चो की संख्या"]
+                    "entry.1514506018": data.date,
+					"entry.1570193186": data.peeoName,
+					"entry.814417343": data.RevenueVillage ,
+					"entry.877764889": q["Family"],
+					"entry.1907734475": q["कुल परिवारों की संख्या"],
+					"entry.1561314002": q["सर्वे में समिल्लत कुल परिवारों की संख्या"],
+					"entry.1511662224": q["सर्वे में चिन्हित विद्यालय में प्रवेश योग्य बच्चो की संख्या"],
+					"entry.1677082562": q["सर्वे में चिन्हित आंगन बाड़ी  में प्रवेश योग्य बच्चो की संख्या"],
+					"entry.436307163": q["आंगन बाड़ी से विद्यालय कि प्रथम कक्षा में प्रवेश योग्य बच्चो की संख्या"],
+					"entry.431998706": q["सर्वे में चिन्हित उपरोक्त सभी में cwsn प्रवेश योग्य बच्चो की संख्या"]
                     }
                     );
 					}
