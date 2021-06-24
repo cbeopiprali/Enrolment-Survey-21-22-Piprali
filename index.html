@@ -1,0 +1,1407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title> नामांकन अभियान सर्वे प्रपत्र 21-22 - ब्लाक पिपराली</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-language" content="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+<!-- Your platform (jquery) scripts. -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+<link href="https://unpkg.com/survey-jquery@1.8.18/modern.css" type="text/css" rel="stylesheet" />
+<script src="https://unpkg.com/survey-jquery@1.8.18/survey.jquery.min.js"></script>
+<style>
+table.sv_q_matrix_dynamic {
+  display: block;
+  width: calc(100% - 150px) !important;
+  overflow-x: scroll;
+  margin-left: 150px;
+}
+table.sv_q_matrix_dynamic tr>th:first-child {
+  position: absolute;
+  width: 150px;
+  margin-left: -150px;
+  margin-top: 11px;
+  border-bottom: 1px solid rgb(231, 231, 231);
+}
+.sv-header__text{
+text-align:center;
+width:100%;
+}
+</style>
+</head>
+<body style="background-color:whitesmoke; padding-left:0rem;padding-right:0rem;">
+<div id="surveyContainer" style="background-color:white;"></div>
+</body>
+<script>
+Survey.StylesManager.applyTheme("modern");
+
+var surveyJSON = {
+  "title": "नामांकन अभियान सर्वे प्रपत्र 21-22 - ब्लाक पिपराली",
+  "description": "(ब्लाक पिपराली)",
+  "logo": "https://i.pinimg.com/originals/33/63/ed/3363ed08a390ecec6e6f3ec775a2fd2a.jpg",
+  "logoWidth": 150,
+  "logoHeight": 100,
+  "logoPosition": "top",
+  "completedHtml": "<html>\n<h3>Thank you! Your data has been saved successfully!</h3>\n<a href=\"./\" class=\"sv-btn\" style=\"color:green;\" >Go back</a>\n</html>",
+  "pages": [
+    {
+      "name": "page1",
+      "elements": [
+        {
+          "type": "dropdown",
+          "name": "peeoName",
+          "title": "पंचायत ",
+          "isRequired": true,
+          "choices": [
+          "अभयपुरा",
+        "कटराथल",
+         "किशनपुरा",
+         "कुडली",
+         "कुशलपरा",
+        "कोलिडा",
+        "गुंगारा",
+       "गोकुलपुरा",
+        "चन्दपुरा",
+         "चैनपुरा",
+         "जुराठडा",
+        "ढाणी भदालान",
+        "तारपुरा",
+        "दादिया",
+         "दौलतपुरा",
+        "धर्मशाला",
+         "नानी",
+        "पलसाना",
+         "पलासरा",
+        "पिपराली",
+        "पुरोहित का बास",
+        "बाजौर",
+        "बेरी",
+        "भादवासी",
+        "मलकेडा",
+        "रधुनाथगढ",
+         "राजपुरा",
+         "राधाकिशनपुरा",
+         "रानोली",
+        "रैवासा",
+        "लढाणा",
+         "वैद की ढाणी",
+         "शिवसिहपुरा",
+         "शिश्यूं",
+         "श्यामगढ",
+         "श्यामपुरा",
+         "सांगरवा",
+        "सिंहासन",
+         "सीकर कल्याण ",
+        "सीकर बजाज",
+         "सुजावास",
+         "हर्ष"
+          ],
+          "choicesOrder": "asc"
+        },
+        {
+          "type": "dropdown",
+          "name": "RevenueVillage ",
+          "title": "Village ",
+          "isRequired": true,
+          "choices": [
+          {
+           "value":"रा.उ .मा.वि. नांगल",
+           "visibleIf":"{peeoName}='अभयपुरा'"
+           },
+           {
+            "value":"रा.उ.प्रा.वि. भगतपुरा",
+	    "visibleIf":"{peeoName}='अभयपुरा'"
+             },
+            {
+            "value":"रा.उ.प्रा.वि. चीरावाली जोहडी",
+	   "visibleIf":"{peeoName}='अभयपुरा'"
+            },
+	   {
+            "value":"रा.उ.प्रा.वि. पृथ्वीपुरा",
+	 "visibleIf":"{peeoName}='अभयपुरा'"
+            },
+	  {
+            "value":"रा.प्रा.वि. दक्षिण ढाणी नांगल",
+	  "visibleIf":"{peeoName}='अभयपुरा'"
+          },
+	  {
+            "value":"रा.उ.प्रा.वि. जोशियो की ढाणी",
+	   "visibleIf":"{peeoName}='अभयपुरा'"
+           },
+	  {
+            "value":"राप्रावि चक्कुमली वाला",
+	 "visibleIf":"{peeoName}='अभयपुरा'"
+          },
+		 {
+            "value":"राउमावि कटराथल",
+            "visibleIf":"{peeoName}='कटराथल'"
+			},
+			 {
+            "value":"रा.उ.प्रा.वि. नाडिया कुम्हारान",
+			 "visibleIf":"{peeoName}='कटराथल'"
+			},
+			 {
+            "value":"रा.प्रा.वि. लुहारी जोहडी कटराथल",
+			 "visibleIf":"{peeoName}='कटराथल'"
+			},
+			 {
+            "value":"रा.प्रा.वि. नाडिया किसनाराम",
+			 "visibleIf":"{peeoName}='कटराथल'"
+			},
+			 {
+            "value":"रा.प्रा.वि. भामूओ की ढाणी",
+			 "visibleIf":"{peeoName}='कटराथल'"
+			},
+			 {
+            "value":"रा.प्रा.वि. समदडी जोहडी कटराथल",
+			 "visibleIf":"{peeoName}='कटराथल'"
+			},
+			 {
+            "value":"रा.प्रा.वि. वार्ड न 12 रेल्वे स्टेशन के पास",
+			 "visibleIf":"{peeoName}='कटराथल'"
+			},
+			 {
+            "value":"रा.प्रा.वि. ढाणावाली",
+			 "visibleIf":"{peeoName}='कटराथल'"
+			},
+			 {
+            "value":"रा.प्रा.वि. खातीवाला जोहडा",
+			 "visibleIf":"{peeoName}='कटराथल'"
+			},
+			 {
+            "value":"रा.प्रा.वि. अलायली जोहडी",
+			 "visibleIf":"{peeoName}='कटराथल'"
+			},
+			 {
+            "value":"रा.प्रा.वि. बाक्यावाली",
+			 "visibleIf":"{peeoName}='कटराथल'"
+			},
+			 {
+            "value":"रा.प्रा.वि. बगडियो की ढाणी",
+			 "visibleIf":"{peeoName}='कटराथल'"
+			},
+			 {
+            "value":"रा.प्रावि. नागरली जोहडी कटराथल",
+			 "visibleIf":"{peeoName}='कटराथल'"
+			},
+			 {
+            "value":"रा.प्रा.वि. वणी कटराथल",
+			 "visibleIf":"{peeoName}='कटराथल'"
+			},
+			 {
+            "value":"राउमा.वि. किशनपुरा",
+            "visibleIf":"{peeoName}='किशनपुरा'"
+			},
+			 {
+            "value":"रा.मा.वि. मियां की ढाणी",
+			"visibleIf":"{peeoName}='किशनपुरा'"
+			},
+			 {
+            "value":"राउ.प्रा.वि. पापडियो की ढाणी",
+			"visibleIf":"{peeoName}='किशनपुरा'"
+			},
+			 {
+            "value":"रा.उ.प्रा.वि. अखैपुरा",
+			"visibleIf":"{peeoName}='किशनपुरा'"
+			},
+			 {
+            "value":"रा.बाण्उ.प्रा.वि.डूंगरी जोहड़ी",
+			"visibleIf":"{peeoName}='किशनपुरा'"
+			},
+			 {
+            "value":"राप्रावि खिचडों की जोहडी",
+			"visibleIf":"{peeoName}='किशनपुरा'"
+			},
+			 {
+            "value":"राप्रावि खांगा का नाडिया",
+			"visibleIf":"{peeoName}='किशनपुरा'"
+			},
+			 {
+            "value":"राउमावि. कुडली",
+            "visibleIf":"{peeoName}='कुडली'"
+			},
+			 {
+            "value":"राउमावि. हरदयालपुरा",
+			"visibleIf":"{peeoName}='कुडली'"
+			},
+			 {
+            "value":"रा प्रा वि नला का बालाजी बामणी जोहडी तन कुडली",
+			"visibleIf":"{peeoName}='कुडली'"
+			},
+			 {
+            "value":"रा.बा.उ.प्रा.वि. कुडली",
+			"visibleIf":"{peeoName}='कुडली'"
+			},
+			 {
+            "value":"रा.उ.प्रा.वि. फुटी जोहडी",
+			"visibleIf":"{peeoName}='कुडली'"
+			},
+			 {
+            "value":"रा.उ.मा.वि. कुशलपुरा",
+              "visibleIf":"{peeoName}='कुशलपरा'"
+			  },
+			   {
+            "value":"रा.उ.प्रा.वि. राणावाली",
+			 "visibleIf":"{peeoName}='कुशलपरा'"
+			  },
+			   {
+            "value":"रा.प्रा.वि. नाडा की ढाणी",
+			 "visibleIf":"{peeoName}='कुशलपरा'"
+			  },
+			   {
+            "value":"रा.उ.प्रा.वि. शिवनगर",
+			 "visibleIf":"{peeoName}='कुशलपरा'"
+			  },
+			   {
+            "value":"रा.उ.प्रा.वि. अलायजी जोहडी",
+			 "visibleIf":"{peeoName}='कुशलपरा'"
+			  },
+			   {
+            "value":"रा.प्रा.वि. न्योताणा जोहडा",
+			 "visibleIf":"{peeoName}='कुशलपरा'"
+			  },
+			   {
+            "value":"राउमावि कोलीडा",
+            "visibleIf":"{peeoName}='कोलिडा'"
+			},
+			 {
+            "value":"रा.उ.प्रा.वि. कोलिडा",
+			"visibleIf":"{peeoName}='कोलिडा'"
+			},
+			 {
+            "value":"रा.उ.प्रा. वि. खेताणी जोहडी",
+			"visibleIf":"{peeoName}='कोलिडा'"
+			},
+			 {
+            "value":"रा.उ.प्रा.वि. नाथा की ढाणी",
+			"visibleIf":"{peeoName}='कोलिडा'"
+			},
+			 {
+            "value":"रा.प्रा.वि. पिपाणा जोहडा",
+			"visibleIf":"{peeoName}='कोलिडा'"
+			},
+			 {
+            "value":"रा.उ.मा.वि. गुगांरा",
+            "visibleIf":"{peeoName}='गुंगारा'"
+			},
+			 {
+            "value":"रा.उ मा.वि. स्वामी की ढाणी",
+			"visibleIf":"{peeoName}='गुंगारा'"
+			},
+			 {
+            "value":"रा.सं.प्रा.वि. खु्टयाली जोहडी गुगारा",
+			"visibleIf":"{peeoName}='गुंगारा'"
+			},
+			 {
+            "value":"रा.प्रा.वि. ढाकावाली गुंगारा",
+			"visibleIf":"{peeoName}='गुंगारा'"
+			},
+			 {
+            "value":"रा.प्रा.वि केशर वाली जोहडी",
+			"visibleIf":"{peeoName}='गुंगारा'"
+			},
+			 {
+            "value":"रा.प्रा.वि. नाडा जोहडा गुंगारा",
+			"visibleIf":"{peeoName}='गुंगारा'"
+			},
+			 {
+            "value":"रा.प्रा.वि ढारा श्याम सिंह",
+			"visibleIf":"{peeoName}='गुंगारा'"
+			},
+			 {
+            "value":"रा.उ.प्रा.वि. पिलियो का ठहर",
+			"visibleIf":"{peeoName}='गुंगारा'"
+			},
+			 {
+            "value":"रा.उ.प्रा.वि. खेजरवाला",
+			"visibleIf":"{peeoName}='गुंगारा'"
+			},
+			 {
+            "value":"रा.उ.प्रा.वि. सुन्दरली जोहडी",
+			"visibleIf":"{peeoName}='गुंगारा'"
+			},
+			 {
+            "value":"महा.गाँधी अंग्रेजी माध्यम वि  गोकुलपुरा",
+            "visibleIf":"{peeoName}='गोकुलपुरा'"
+			},
+			 {
+            "value":"रा.उ.मा.वि. गोकुलपुरा",
+			"visibleIf":"{peeoName}='गोकुलपुरा'"
+			},
+			 {
+            "value":"रामावि. दासा की ढाणी",
+			"visibleIf":"{peeoName}='गोकुलपुरा'"
+			},
+			 {
+            "value":"रा.सं.प्रा.वि. गोकुलपुरा",
+			"visibleIf":"{peeoName}='गोकुलपुरा'"
+			},
+			 {
+            "value":"रा.प्रा.वि. कूपडा जोहडा",
+			"visibleIf":"{peeoName}='गोकुलपुरा'"
+			},
+			 {
+            "value":"रा.उ.प्रा.वि. रामू का बास",
+			"visibleIf":"{peeoName}='गोकुलपुरा'"
+			},
+			 {
+            "value":"रा.प्रा.वि. सेवदा की ढाणी (रेबारियों का मोहल्ला)",
+			"visibleIf":"{peeoName}='गोकुलपुरा'"
+			},
+			 {
+            "value":"राउ.प्रा.वि.देवली जोहडी  गोकुलपुरा",
+			"visibleIf":"{peeoName}='गोकुलपुरा'"
+			},
+			 {
+            "value":"रा.प्रा.वि. खीचडो का बास",
+			"visibleIf":"{peeoName}='गोकुलपुरा'"
+			},
+			 {
+            "value":"राउमावि. चन्दपुरा",
+            "visibleIf":"{peeoName}='चन्दपुरा'"
+			},
+			 {
+            "value":"रा.उ.प्रा.वि. ढाणी सालमसिंह",
+			"visibleIf":"{peeoName}='चन्दपुरा'"
+			},
+			 {
+            "value":"रा.उ.प्रा.वि. मीरवाल तलाई",
+			"visibleIf":"{peeoName}='चन्दपुरा'"
+			},
+			 {
+            "value":"रा.उ.प्रा.वि. जोडक्या जोहडा",
+			"visibleIf":"{peeoName}='चन्दपुरा'"
+			},
+			 {
+            "value":"रा.उ.प्रा.वि. बजाज ग्राम सावंली",
+			"visibleIf":"{peeoName}='चन्दपुरा'"
+			},
+			 {
+            "value":"राउमावि. चैनपुरा",
+            "visibleIf":"{peeoName}='चैनपुरा'"
+			},
+			 {
+            "value":"राउमावि. चारण का बास",
+			"visibleIf":"{peeoName}='चैनपुरा'"
+			},
+			 {
+            "value":"रा.मा.वि. पिपलीनगर",
+			"visibleIf":"{peeoName}='चैनपुरा'"
+			},
+			 {
+            "value":"रा.उ.प्रा.वि. दौला की ढाणी",
+			"visibleIf":"{peeoName}='चैनपुरा'"
+			},
+			 {
+            "value":"रा.उ.प्रा.वि दादली",
+			"visibleIf":"{peeoName}='चैनपुरा'"
+			},
+			 {
+            "value":"रा.उ. प्रा.वि. गुजरिया जोहडा चैनपुरा",
+			"visibleIf":"{peeoName}='चैनपुरा'"
+			},
+			 {
+            "value":"रा.मा .वि देवलानाडा",
+			"visibleIf":"{peeoName}='चैनपुरा'"
+			},
+			 {
+            "value":"रा.प्रा.वि. (नाडिया कादरखान)चारणबास",
+			"visibleIf":"{peeoName}='चैनपुरा'"
+			},
+			 {
+            "value":"रा.उ.मा.वि. जुराठडा",
+           "visibleIf":"{peeoName}='जुराठडा'"
+		   },
+		    {
+            "value":"रामावि. बराल",
+			"visibleIf":"{peeoName}='जुराठडा'"
+		   },
+		    {
+            "value":"रा.उ.प्रा.वि. पिपलां की ढाणी",
+			"visibleIf":"{peeoName}='जुराठडा'"
+		   },
+		    {
+            "value":"रा.उ.प्रा.वि.  दुल्हेपुरा",
+			"visibleIf":"{peeoName}='जुराठडा'"
+		   },
+		    {
+            "value":"रा.प्रा.वि. ईटवाली जोहडी",
+			"visibleIf":"{peeoName}='जुराठडा'"
+		   },
+		    {
+            "value":"रा.प्रा.वि. तिवाडी की ढाणी",
+			"visibleIf":"{peeoName}='जुराठडा'"
+		   },
+		    {
+            "value":"रा.उण्मावि  ढाणी भदालान",
+            "visibleIf":"{peeoName}='ढाणी भदालान'"
+			},
+			 {
+             "value":"रा.सं.उ.प्रा.वि. बालाजी की ढाणी",
+			 "visibleIf":"{peeoName}='ढाणी भदालान'"
+			},
+			 {
+            "value":"रा.सं.उ.प्रा.वि. सुन्दरपुरा",
+			"visibleIf":"{peeoName}='ढाणी भदालान'"
+			},
+			 {
+            "value":"रा.उ.प्रा.वि. चेतनदास की ढाणी",
+			"visibleIf":"{peeoName}='ढाणी भदालान'"
+			},
+			 {
+            "value":"रा.प्रा.वि. ढाणी बिजारणियां",
+			"visibleIf":"{peeoName}='ढाणी भदालान'"
+			},
+			 {
+            "value":"राप्रावि डोलीवाली ढाणी",
+			"visibleIf":"{peeoName}='ढाणी भदालान'"
+			},
+			 {
+            "value":"रा.उ.प्रा.वि. टीबा कंवर की ढाणी",
+			"visibleIf":"{peeoName}='ढाणी भदालान'"
+			},
+			 {
+            "value":"रा.प्रा.वि. दुर्जनवाला जोहडा",
+			"visibleIf":"{peeoName}='ढाणी भदालान'"
+			},
+			 {
+            "value":"रा.प्रा.वि. बधाला जोहड़ा ढाणी भदालान",
+			"visibleIf":"{peeoName}='ढाणी भदालान'"
+			},
+			 {
+            "value":"राप्रावि नाथूवाली जोहडी",
+			"visibleIf":"{peeoName}='ढाणी भदालान'"
+			},
+			 {
+            "value":"रा.मा.वि. खेदडो की ढाणी",
+            "visibleIf":"{peeoName}='तारपुरा'"
+			},
+			 {
+            "value":"राउमावि तारपुरा",
+			"visibleIf":"{peeoName}='तारपुरा'"
+			},
+			 {
+            "value":"रा.उ.प्रा.वि. मनसा जोहडी",
+			"visibleIf":"{peeoName}='तारपुरा'"
+			},
+			 {
+            "value":"रा.उ.प्रा.वि. नाडा जोहडा तारपुरा",
+			"visibleIf":"{peeoName}='तारपुरा'"
+			},
+			 {
+            "value":"रा.प्रा.वि. बुचाणी जोहडी",
+			"visibleIf":"{peeoName}='तारपुरा'"
+			},
+			 {
+            "value":"रा.प्रा.वि. आशाणा जोहडा",
+			"visibleIf":"{peeoName}='तारपुरा'"
+			},
+			 {
+            "value":"रा.प्रा.वि. भाटवाली जोहडी",
+			"visibleIf":"{peeoName}='तारपुरा'"
+			},
+			 {
+            "value":"रा.प्रा.वि. डाबरजोहडी",
+			"visibleIf":"{peeoName}='तारपुरा'"
+			},
+			 {
+            "value":"रा.प्रा.वि. रामचन्द्र की जोहडी",
+			"visibleIf":"{peeoName}='तारपुरा'"
+			},
+			 {
+            "value":"रा.बा.उ.मा.वि. दादिया",
+            "visibleIf":"{peeoName}='दादिया"
+              },
+			   {
+            "value":"रा.मा.वि. दिनारपुरा",
+"visibleIf":"{peeoName}='दादिया"
+              },
+			   {
+            "value":"राउ.प्रा.वि. नई बस्ती दादिया",
+"visibleIf":"{peeoName}='दादिया"
+              },
+			   {
+            "value":"रा.प्रावि. लालाणा जोहडा",
+"visibleIf":"{peeoName}='दादिया"
+              },
+			   {
+            "value":"रा.प्रा.वि. तेजाणा जोहडा",
+"visibleIf":"{peeoName}='दादिया"
+              },
+			   {
+            "value":"राउमाबावि. दौलतपुरा",
+            "visibleIf":"{peeoName}='दौलतपुरा'"
+},
+ {
+            "value":"रा.उ.मा.वि. लक्ष्मणा का बास",
+"visibleIf":"{peeoName}='दौलतपुरा'"
+},
+ {
+            "value":"रा.उ.प्रा.वि. दौलतपुरा",
+"visibleIf":"{peeoName}='दौलतपुरा'"
+},
+ {
+            "value":"रा.उ.प्रावि. गुमाना का बास",
+"visibleIf":"{peeoName}='दौलतपुरा'"
+},
+ {
+            "value":"रा.प्रावि. कुम्भा की ढाणी",
+"visibleIf":"{peeoName}='दौलतपुरा'"
+},
+ {
+            "value":"रा.प्रा.वि. गीदाणा जोहडा",
+"visibleIf":"{peeoName}='दौलतपुरा'"
+},
+ {
+            "value":"रा.प्रावि. मालियो की ढाणी",
+"visibleIf":"{peeoName}='दौलतपुरा'"
+},
+ {
+            "value":"रा.मा.वि. चैनाराम की ढाणी",
+            "visibleIf":"{peeoName}='धर्मशाला'"
+},
+ {
+            "value":"सेठ जेपी.गो राउमावि धर्मशाला बेरी",
+"visibleIf":"{peeoName}='धर्मशाला'"
+},
+ {
+            "value":"रा.मा वि. धडेलियो की ढाणी",
+"visibleIf":"{peeoName}='धर्मशाला'"
+},
+ {
+            "value":"रा.उ.प्रा.वि. बालाजी का नाडा बेरी",
+"visibleIf":"{peeoName}='धर्मशाला'"
+},
+ {
+            "value":"रा.प्रा.वि. मीणो की ढाणी",
+"visibleIf":"{peeoName}='धर्मशाला'"
+},
+ {
+            "value":"रा. उ मा.वि. नानी",
+            "visibleIf":"{peeoName}='नानी'"
+},
+ {
+            "value":"रा.प्रा.वि. आधूणा जोहडा",
+ "visibleIf":"{peeoName}='नानी'"
+},
+ {
+            "value":"रा.उ.प्रा.वि. नाथावतपुरा",
+ "visibleIf":"{peeoName}='नानी'"
+},
+ {
+            "value":"रा.प्रा.वि. उतरादा नाडा नानी",
+ "visibleIf":"{peeoName}='नानी'"
+},
+ {
+            "value":"राउ.प्रा.वि. गोपीनाथ की ढाणी",
+ "visibleIf":"{peeoName}='सीकर बजाज'"
+},
+ {
+            "value":"रा.उ.मा.वि. पलसाना",
+            "visibleIf":"{peeoName}='पलसाना'"
+},
+ {
+            "value":"रा.मा.वि. बा. पलसाना",
+"visibleIf":"{peeoName}='पलसाना'"
+},
+ {
+            "value":"रा.उ.प्रा.वि. गणपतिया जोहडा",
+"visibleIf":"{peeoName}='पलसाना'"
+},
+ {
+            "value":"रा.प्रा.वि. हिन्दुवाला जोहडा",
+"visibleIf":"{peeoName}='पलसाना'"
+},
+ {
+            "value":"रा.प्रा.वि. लाम्बी जोहडी",
+"visibleIf":"{peeoName}='पलसाना'"
+},
+ {
+            "value":"रा.प्रा.वि. होद का बालाजी",
+"visibleIf":"{peeoName}='पलसाना'"
+},
+ {
+            "value":"राप्रावि कैमरिया जोहडा",
+"visibleIf":"{peeoName}='पलसाना'"
+},
+ {
+            "value":"राप्रावि छिपी जोहडी",
+"visibleIf":"{peeoName}='पलसाना'"
+},
+ {
+            "value":"राप्रावि छिलरा जोहडा",
+"visibleIf":"{peeoName}='पलसाना'"
+},
+ {
+            "value":"राप्रावि लाम्बा जोहडा",
+"visibleIf":"{peeoName}='पलसाना'"
+},
+ {
+            "value":"राउमावि पलासरा",
+            "visibleIf":"{peeoName}='पलासरा'"
+},
+ {
+            "value":"रा.मा.वि. टोडी माधोपुरा",
+"visibleIf":"{peeoName}='पलासरा'"
+},
+ {
+            "value":"राउ.प्रा.वि. कालाखेत",
+"visibleIf":"{peeoName}='पलासरा'"
+},
+ {
+            "value":"रा.प्रा.वि. भूरियो की ढाणी",
+"visibleIf":"{peeoName}='पलासरा'"
+},
+ {
+            "value":"रा.प्रा.वि. ढाणी चौसला",
+"visibleIf":"{peeoName}='पलासरा'"
+},
+ {
+            "value":"रा.उ.प्रा.वि. बुटोली",
+"visibleIf":"{peeoName}='पलासरा'"
+},
+ {
+            "value":"रा.उ.प्रा.वि. हरिपुरा",
+"visibleIf":"{peeoName}='पलासरा'"
+},
+ {
+            "value":"रा.उ.प्रा.वि. टोडी",
+"visibleIf":"{peeoName}='पलासरा'"
+},
+ {
+            "value":"रा मा .वि. माधोपुरा",
+"visibleIf":"{peeoName}='पलासरा'"
+},
+ {
+            "value":"रा.मा .वि. शोभ",
+"visibleIf":"{peeoName}='पलासरा'"
+},
+ {
+            "value":"रा.मा.वि. राजपूतो की ढाणी",
+            "visibleIf":"{peeoName}='पिपराली'"
+},
+ {
+            "value":"रा.उ मा.वि. नाडी पिपराली",
+"visibleIf":"{peeoName}='पिपराली'"
+},
+ {
+            "value":"रा.प्रवेशिका.वि. पलासिंया पिपराली",
+"visibleIf":"{peeoName}='पिपराली'"
+},
+ {
+            "value":"राउमावि. पिपराली",
+"visibleIf":"{peeoName}='पिपराली'"
+},
+ {
+            "value":"रामावि. बा.पिपराली",
+"visibleIf":"{peeoName}='पिपराली'"
+},
+ {
+            "value":"रा.उ.प्रा.वि. संस्कृत मालूवाला जोहडा",
+"visibleIf":"{peeoName}='पिपराली'"
+},
+ {
+            "value":"रा.प्रा.वि. भामूओ की ढाणी पिपराली",
+"visibleIf":"{peeoName}='पिपराली'"
+},
+ {
+            "value":"रा.प्रा.वि. मीणा बस्ती पिपराली",
+"visibleIf":"{peeoName}='पिपराली'"
+},
+ {
+            "value":"रा.उ.प्रा.वि. नागरवाला जोहडा",
+"visibleIf":"{peeoName}='पिपराली'"
+},
+ {
+            "value":"रा.उ प्रा.वि. लोठवाली जोहडी",
+"visibleIf":"{peeoName}='पिपराली'"
+},
+ {
+            "value":"रा.प्रा.वि. वैदिक आश्रम पिपराली",
+"visibleIf":"{peeoName}='पिपराली'"
+},
+ {
+            "value":"रा.उ.मा.वि. पुरोहित का बास",
+            "visibleIf":"{peeoName}='पुरोहित का बास'"
+},
+ {
+            "value":"रा.मा.वि. लखीपुरा",
+"visibleIf":"{peeoName}='पुरोहित का बास'"
+},
+ {
+            "value":"रा.उ.प्रा.वि. रतालीजोहड़ी  पु. का बास",
+"visibleIf":"{peeoName}='पुरोहित का बास'"
+},
+ {
+            "value":"रा.प्रा.वि. नागोरियां बस्ती",
+"visibleIf":"{peeoName}='पुरोहित का बास'"
+},
+ {
+            "value":"रा.उ.प्रा.वि. भैरुजी स्टेण्ड",
+"visibleIf":"{peeoName}='पुरोहित का बास'"
+},
+ {
+            "value":"रा.उ.प्रा.वि. भरगडो की ढाणी",
+"visibleIf":"{peeoName}='पुरोहित का बास'"
+},
+ {
+            "value":"रा.प्रा.वि. उण्डानला पु.का बास",
+"visibleIf":"{peeoName}='पुरोहित का बास'"
+},
+ {
+            "value":"रा.प्रा.वि. डोईयो का ढाणी",
+"visibleIf":"{peeoName}='पुरोहित का बास'"
+},
+ {
+            "value":"राउमावि. बाजौर",
+            "visibleIf":"{peeoName}='बाजौर'"
+},
+ {
+            "value":"रा.प्रा.वि. फूटी जोहडी बाजौर",
+"visibleIf":"{peeoName}='बाजौर'"
+},
+ {
+            "value":"रा.उ.प्रा.वि. ढाका की ढाणी बाजौर",
+"visibleIf":"{peeoName}='बाजौर'"
+},
+ {
+            "value":"रा.प्रा.वि. चतुर्भज जोहडी",
+"visibleIf":"{peeoName}='बाजौर'"
+},
+ {
+            "value":"रा.प्रा.वि. झूंझारा का मठ",
+"visibleIf":"{peeoName}='बाजौर'"
+},
+ {
+            "value":"रा.उ.प्रा.वि. मालियो की ढाणी बाजौर",
+"visibleIf":"{peeoName}='बाजौर'"
+},
+ {
+            "value":"रा.उप्रा.वि. नीम की ढाणी",
+"visibleIf":"{peeoName}='बाजौर'"
+},
+ {
+            "value":"रा.उ.प्रा.वि. कहारो की ढाणी",
+"visibleIf":"{peeoName}='बाजौर'"
+},
+ {
+            "value":"राउमावि. बेरी",
+            "visibleIf":"{peeoName}='बेरी'"
+},
+ {
+            "value":"राउमावि. भोज्याणा जोहडा बेरी",
+"visibleIf":"{peeoName}='बेरी'"
+},
+ {
+            "value":"रा.उ.प्रा.वि. बालू चेजारा की ढाणी",
+"visibleIf":"{peeoName}='बेरी'"
+},
+ {
+            "value":"रा.उ.प्रा.वि. डिगली जोहडी बेरी",
+"visibleIf":"{peeoName}='बेरी'"
+},
+ {
+            "value":"रा.प्रा.वि.खाकी जी के मन्दिर के पास",
+"visibleIf":"{peeoName}='बेरी'"
+},
+ {
+            "value":"रा.प्रा.वि. डिगालडी जोहडी बेरी",
+"visibleIf":"{peeoName}='बेरी'"
+},
+ {
+            "value":"रा.प्रा.वि. महणो की ढाणी बेरी",
+"visibleIf":"{peeoName}='बेरी'"
+},
+ {
+            "value":"रा.प्रा.वि. उजीर्ण सिह का नाडा",
+"visibleIf":"{peeoName}='बेरी'"
+},
+ {
+            "value":"रा.प्रा वि महलाणा जोहडा बेरी",
+"visibleIf":"{peeoName}='बेरी'"
+},
+ {
+            "value":"राउमावि. भादवासी",
+            "visibleIf":"{peeoName}='भादवासी'"
+},
+ {
+            "value":"रामावि. जगमालपुरा",
+"visibleIf":"{peeoName}='भादवासी'"
+},
+ {
+            "value":"रा.उ प्रा.वि.कस्तूरबा बालिका",
+"visibleIf":"{peeoName}='भादवासी'"
+},
+ {
+            "value":"रा.प्रा.वि. पूर्वाणी जोहडा जगमालपुरा",
+"visibleIf":"{peeoName}='भादवासी'"
+},
+ {
+            "value":"रा.प्रा.वि. धीगडा जोहडा",
+"visibleIf":"{peeoName}='भादवासी'"
+},
+ {
+            "value":"राउमावि. मलकेडा",
+            "visibleIf":"{peeoName}='मलकेडा'"
+},
+ {
+            "value":"रा.मा.वि. देवगढ",
+"visibleIf":"{peeoName}='मलकेडा'"
+},
+ {
+            "value":"रा.उप्रा.वि. रावजी की ढाणी",
+"visibleIf":"{peeoName}='मलकेडा'"
+},
+ {
+            "value":"रा.उप्रा.वि. पिपला जोहडा",
+"visibleIf":"{peeoName}='मलकेडा'"
+},
+ {
+            "value":"रा.उप्रा.वि. मालियो की ढाणी",
+"visibleIf":"{peeoName}='मलकेडा'"
+},
+ {
+            "value":"रा.प्रा.वि. चौहानो की ढाणी",
+"visibleIf":"{peeoName}='मलकेडा'"
+},
+ {
+            "value":"रा.उ.प्रा.वि. हीरामल देवगढ",
+"visibleIf":"{peeoName}='मलकेडा'"
+},
+ {
+            "value":"रा.उ.मा.वि. रघुनाथगढ़",
+            "visibleIf":"{peeoName}='रधुनाथगढ'"
+},
+ {
+            "value":"रा.मा.वि. डाबपनोरा",
+ "visibleIf":"{peeoName}='रधुनाथगढ'"
+},
+ {
+            "value":"रा.उ.प्रा.वि.बा. रधुनाथगढ",
+ "visibleIf":"{peeoName}='रधुनाथगढ'"
+},
+ {
+            "value":"रा.उ.प्रा.वि. गणेश मोड",
+ "visibleIf":"{peeoName}='रधुनाथगढ'"
+},
+ {
+            "value":"रा.प्रा.वि.बा. पण्डोरा",
+ "visibleIf":"{peeoName}='रधुनाथगढ'"
+},
+ {
+            "value":"रा.उ.प्रा.वि. खोरी ब्राहमणान",
+ "visibleIf":"{peeoName}='रधुनाथगढ'"
+},
+ {
+            "value":"रा.प्रा.वि. छोटा की जोहडी खोरी",
+ "visibleIf":"{peeoName}='रधुनाथगढ'"
+},
+ {
+            "value":"राउमावि. राजपुरा",
+            "visibleIf":"{peeoName}='राजपुरा'"
+},
+ {
+            "value":"रा.मा.वि. गुढाखुर्द",
+"visibleIf":"{peeoName}='राजपुरा'"
+},
+ {
+            "value":"रा.उ.प्रा.वि. हात्याज",
+"visibleIf":"{peeoName}='राजपुरा'"
+},
+ {
+            "value":"रा.उ.प्रा.वि. गुढाकलां",
+"visibleIf":"{peeoName}='राजपुरा'"
+},
+ {
+            "value":"रा.उ.प्रा.वि. ढाणी चौधरी",
+"visibleIf":"{peeoName}='राजपुरा'"
+},
+ {
+            "value":"रामावि. उदयदास की ढाणी",
+            "visibleIf":"{peeoName}='राधाकिशनपुरा'"
+},
+ {
+            "value":"राउमावि - राधाकृष्णपुरा",
+"visibleIf":"{peeoName}='राधाकिशनपुरा'"
+},
+ {
+            "value":"राउ.प्रा.वि. उदयलाल की ढाणी",
+"visibleIf":"{peeoName}='राधाकिशनपुरा'"
+},
+ {
+            "value":"रा.उ प्रावि. धमकाली जोहडी",
+"visibleIf":"{peeoName}='राधाकिशनपुरा'"
+},
+ {
+            "value":"रा.उ.प्रा.वि. दुला की ढाणी",
+"visibleIf":"{peeoName}='राधाकिशनपुरा'"
+},
+ {
+            "value":"राउ माबावि. रानोली",
+            "visibleIf":"{peeoName}='रानोली'"
+},
+ {
+            "value":"राप्रावि हरनाथजी की ढाणी",
+"visibleIf":"{peeoName}='रानोली'"
+},
+ {
+            "value":"रा.उ.प्रा.वि. बाणियो की ढाणी",
+"visibleIf":"{peeoName}='रानोली'"
+},
+ {
+            "value":"रा.प्रा.वि. मीलो की ढाणी रानोली",
+"visibleIf":"{peeoName}='रानोली'"
+},
+ {
+            "value":"रा.प्रा.वि. शोभा वाली कोठी",
+"visibleIf":"{peeoName}='रानोली'"
+},
+ {
+            "value":"रा.प्रा.वि. लीपडी जोहडी",
+"visibleIf":"{peeoName}='रानोली'"
+},
+ {
+            "value":"राउमावि रैवासा",
+            "visibleIf":"{peeoName}='रैवासा'"
+},
+ {
+            "value":"रा.बा.उ.प्रा.वि. रैवासा",
+"visibleIf":"{peeoName}='रैवासा'"
+},
+ {
+            "value":"रा.प्रा.वि. तालाब की ढाणी",
+"visibleIf":"{peeoName}='रैवासा'"
+},
+ {
+            "value":"रा.प्रा.वि. प्रेमसिंह की ढाणी",
+"visibleIf":"{peeoName}='रैवासा'"
+},
+ {
+            "value":"रा.प्रा.वि. महन्तो की केठी",
+"visibleIf":"{peeoName}='रैवासा'"
+},
+ {
+            "value":"रा.उ.मा.वि. लढाणा",
+            "visibleIf":"{peeoName}='लढाणा'"
+},
+ {
+            "value":"रा उ मा वि. रायपुरा",
+"visibleIf":"{peeoName}='लढाणा'"
+},
+ {
+            "value":"रा.सं.प्रा.वि. कुवालसर",
+"visibleIf":"{peeoName}='लढाणा'"
+},
+ {
+            "value":"रा.उ.प्रा.वि. खोखरो की ढाणी",
+"visibleIf":"{peeoName}='लढाणा'"
+},
+ {
+            "value":"रा.प्रा.वि. बडा जोहडा रायपुरा",
+"visibleIf":"{peeoName}='लढाणा'"
+},
+ {
+            "value":"रा.उ.प्रा.वि. बरसिंहपुरा",
+"visibleIf":"{peeoName}='लढाणा'"
+},
+ {
+            "value":"राउमावि वैद की ढाणी",
+            "visibleIf":"{peeoName}='वैद की ढाणी'"
+},
+ {
+            "value":"रा.प्रा.वि. डेरावाली जोहडी",
+"visibleIf":"{peeoName}='वैद की ढाणी'"
+},
+ {
+            "value":"रा.उ मा.वि. शि्ांवसिंहपुरा",
+            "visibleIf":"{peeoName}='शिवसिहपुरा'"
+},
+ {
+            "value":"रा.मा .वि. समर्थपुरा",
+"visibleIf":"{peeoName}='शिवसिहपुरा'"
+},
+ {
+            "value":"रा.प्रा.वि.  धोराणा",
+"visibleIf":"{peeoName}='शिवसिहपुरा'"
+},
+ {
+            "value":"रा.प्रा.वि. शिवसिंहपुरा 204   शिवसिहपुरा",
+"visibleIf":"{peeoName}='शिवसिहपुरा'"
+},
+ {
+            "value":"रा.उ.मा .वि. शिश्यू",
+            "visibleIf":"{peeoName}='शिश्यूं'"
+},
+ {
+            "value":"रा.उ.प्रा.वि. शिश्यू",
+"visibleIf":"{peeoName}='शिश्यूं'"
+},
+ {
+            "value":"रा.बा.उ.प्रा.वि. शिश्यू",
+"visibleIf":"{peeoName}='शिश्यूं'"
+},
+ {
+            "value":"रा.प्रा.वि. ताखडी जोहडी",
+"visibleIf":"{peeoName}='शिश्यूं'"
+},
+ {
+            "value":"रा.प्रा.वि. जाजम की ढाणी",
+"visibleIf":"{peeoName}='शिश्यूं'"
+},
+ {
+            "value":"राप्रावि टिल्यावाली ढाणी",
+"visibleIf":"{peeoName}='शिश्यूं'"
+},
+ {
+            "value":"राप्रावि अडिम्बा जोहडा",
+"visibleIf":"{peeoName}='शिश्यूं'"
+},
+ {
+            "value":"राउमावि. श्यामगढ",
+            "visibleIf":"{peeoName}='श्यामगढ'"
+},
+ {
+            "value":"रा.व.उ.वि शाकम्बरी सकराय",
+"visibleIf":"{peeoName}='श्यामगढ'"
+},
+ {
+            "value":"रा.प्रा.वि. कानडा की ढाणी",
+"visibleIf":"{peeoName}='श्यामगढ'"
+},
+ {
+            "value":"रा.उ.प्रा.वि. धोकर",
+"visibleIf":"{peeoName}='श्यामगढ'"
+},
+ {
+            "value":"रा.उप्रा.वि. भगोवा",
+"visibleIf":"{peeoName}='श्यामगढ'"
+},
+ {
+            "value":"रा.प्रा.वि. ढाणी गौड की श्यामगढ",
+"visibleIf":"{peeoName}='श्यामगढ'"
+},
+ {
+            "value":"रा.प्रा.वि. स्वामी का ढाणी (श्यामगढ़)",
+"visibleIf":"{peeoName}='श्यामगढ'"
+},
+ {
+            "value":"राउ मावि. श्यामपुरा",
+            "visibleIf":"{peeoName}='श्यामपुरा'"
+},
+ {
+            "value":"रा.बा.उ.प्रा.वि. श्यामपुरा",
+"visibleIf":"{peeoName}='श्यामपुरा'"
+},
+ {
+            "value":"रा.उप्रा.वि. शोभाणा जोहडा",
+"visibleIf":"{peeoName}='श्यामपुरा'"
+},
+ {
+            "value":"रा.उप्रा.वि. किकरालिया",
+"visibleIf":"{peeoName}='श्यामपुरा'"
+},
+ {
+            "value":"रा.उ.प्रा.वि. भोजा की ढाणी",
+"visibleIf":"{peeoName}='श्यामपुरा'"
+},
+ {
+            "value":"राउमावि. सांगरवा",
+            "visibleIf":"{peeoName}='सांगरवा'"
+},
+ {
+            "value":"राउमावि. अजबपुरा",
+"visibleIf":"{peeoName}='सांगरवा'"
+},
+ {
+            "value":"रा.प्रा.वि. माला की ढाणी",
+"visibleIf":"{peeoName}='सांगरवा'"
+},
+ {
+            "value":"रा.उ.माविसिंहासन",
+            "visibleIf":"{peeoName}='सिंहासन'"
+},
+ {
+            "value":"रा.उ.प्रा.वि. खिजूरली जोहडी",
+"visibleIf":"{peeoName}='सिंहासन'"
+},
+ {
+            "value":"रा.उ.प्रा.वि. भगासरी जोहडी",
+"visibleIf":"{peeoName}='सिंहासन'"
+},
+ {
+            "value":"रा.बा.उ.प्रा.वि. सिंहासन",
+"visibleIf":"{peeoName}='सिंहासन'"
+},
+ {
+            "value":"राउमावि-राधाकृष्ण,मारु सीकर",
+            "visibleIf":"{peeoName}='सीकर कल्याण' "
+},
+ {
+            "value":"रा,व,उपा,सं,स्कूल- सीकर",
+"visibleIf":"{peeoName}='सीकर कल्याण' "
+},
+ {
+            "value":"श्री कल्याण राउमावि सीकर",
+"visibleIf":"{peeoName}='सीकर कल्याण' "
+},
+ {
+            "value":"प.लाल चितलांगिया राउमावि सीकर",
+            "visibleIf":"{peeoName}='सीकर बजाज'"
+},
+ {
+            "value":"महात्मा गाँधी अंग्रेजी माध्यम वि  हिन्दी विद्या भवन सीकर",
+"visibleIf":"{peeoName}='सीकर बजाज'"
+},
+ {
+            "value":"राबाउमावि-बजाज रोड सीकर",
+"visibleIf":"{peeoName}='सीकर बजाज'"
+},
+ {
+            "value":"रामावि - बांडियाबास सीकर",
+"visibleIf":"{peeoName}='सीकर बजाज'"
+},
+ {
+            "value":"राउप्रावि-संस्कृत सीकर",
+"visibleIf":"{peeoName}='सीकर कल्याण' "
+},
+ {
+            "value":"राप्रावि-व्यापारियन सीकर",
+"visibleIf":"{peeoName}='सीकर बजाज'"
+},
+ {
+            "value":"राप्रावि -छोटूवाली कोठी",
+"visibleIf":"{peeoName}='सीकर बजाज'"
+},
+ {
+            "value":"राप्रावि-कारीगरान सीकर",
+"visibleIf":"{peeoName}='सीकर बजाज'"
+},
+ {
+            "value":"राप्रावि-फतेहपुर रोड  सीकर",
+"visibleIf":"{peeoName}='सीकर कल्याण' "
+},
+ {
+            "value":"राउप्रावि- मोचीवाडा सीकर",
+"visibleIf":"{peeoName}='सीकर बजाज'"
+},
+ {
+            "value":"राबाउप्रावि- वार्ड न,-1 सीकर",
+"visibleIf":"{peeoName}='सीकर बजाज'"
+},
+ {
+            "value":"राप्रावि-पुरोहितान सीकर",
+"visibleIf":"{peeoName}='सीकर बजाज'"
+},
+ {
+            "value":"राउप्रावि-आनन्द नगर सीकर",
+"visibleIf":"{peeoName}='सीकर कल्याण' "
+},
+ {
+            "value":"रा मा वि-हरदयाल सीकर",
+"visibleIf":"{peeoName}='सीकर कल्याण' "
+},
+ {
+            "value":"राउप्रावि-नायकान सीकर",
+"visibleIf":"{peeoName}='सीकर कल्याण' "
+},
+ {
+            "value":"राउप्रावि-विक्रम सीकर",
+"visibleIf":"{peeoName}='सीकर बजाज'"
+},
+ {
+            "value":"राउप्रावि-सर माधव सीकर",
+"visibleIf":"{peeoName}='सीकर कल्याण' "
+},
+ {
+            "value":"राप्रावि- नवोडी कोठी",
+"visibleIf":"{peeoName}='सीकर कल्याण' "
+},
+ {
+            "value":"राप्रावि- वार्ड न,-5 सीकर",
+"visibleIf":"{peeoName}='सीकर कल्याण' "
+},
+ {
+            "value":"राउप्रावि-अम्बेडकर नगर",
+"visibleIf":"{peeoName}='सीकर कल्याण' "
+},
+ {
+            "value":"राबाप्रावि-शास्त्री नगर सीकर",
+"visibleIf":"{peeoName}='सीकर बजाज'"
+},
+ {
+            "value":"राप्रावि-वालमिकी बस्ती सीकर",
+"visibleIf":"{peeoName}='सीकर कल्याण' "
+},
+ {
+            "value":"राबा उप्रावि-हिन्दी विद्या भवन  सीकर",
+"visibleIf":"{peeoName}='सीकर बजाज'"
+},
+ {
+            "value":"रा.उ.मा.वि. सुजावास",
+            "visibleIf":"{peeoName}='सुजावास'"
+},
+ {
+            "value":"रामावि. त्रिलोकपुरा",
+"visibleIf":"{peeoName}='सुजावास'"
+},
+ {
+            "value":"राउप्रावि.स. ढण्ड की जोहडी",
+"visibleIf":"{peeoName}='सुजावास'"
+},
+ {
+            "value":"रा.उ.प्रा.वि. गोरियां",
+"visibleIf":"{peeoName}='सुजावास'"
+},
+ {
+            "value":"रा.प्रा.वि. आदर्ष नगर",
+"visibleIf":"{peeoName}='सुजावास'"
+},
+ {
+            "value":"रा.प्रा.वि. गढवालो की ढाणी",
+"visibleIf":"{peeoName}='सुजावास'"
+},
+ {
+            "value":"रा.प्रा.वि. धानक्या जोहडा",
+"visibleIf":"{peeoName}='सुजावास'"
+},
+ {
+            "value":"रा.प्रा.वि. शेरपुरा",
+"visibleIf":"{peeoName}='सुजावास'"
+},
+ {
+            "value":"रा.प्रा.वि. कासली कीढाणी",
+"visibleIf":"{peeoName}='सुजावास'"
+},
+ {
+            "value":"राउमावि. हर्ष",
+            "visibleIf":"{peeoName}='हर्ष'"
+},
+ {
+            "value":"रा.उ.प्रा.वि. मालियो की ढाणी",
+"visibleIf":"{peeoName}='हर्ष'"
+},
+ {
+            "value":"रा.उ.प्रा.वि. भोया",
+"visibleIf":"{peeoName}='हर्ष'"
+},
+ {
+            "value":"रा.प्रा.वि. पलासिंया हर्ष",
+	"visibleIf":"{peeoName}='हर्ष'"
+ }
+   ]
+ },
+        {
+          "type": "text",
+          "name": "date",
+          "title": "Date of the Data",
+          "inputType": "date",
+          "min": "2020-12-01"
+        },
+        {
+          "type": "matrixdynamic",
+          "name": "question2",
+          "title": "Fill Details",
+          "isRequired": true,
+          "columns": [
+            {
+              "name": "Family",
+              "cellType": "dropdown",
+              "isRequired": true,
+              "choices": [
+                "PermanentFamily",
+                "GhumuntuFamily",
+                "MigratedFamily"
+                ]
+            },
+         {
+              "name": "कुल परिवारों की संख्या ",
+              "cellType": "text",
+              "isRequired": true,
+              "inputType": "number"
+            },
+            {
+              "name": "सर्वे में समिल्लत कुल परिवारों की संख्या",
+              "cellType": "text",
+              "isRequired": true,
+              "inputType": "number"
+            },
+            {
+              "name": "सर्वे में चिन्हित विद्यालय में प्रवेश योग्य बच्चो की संख्या ",
+              "cellType": "text",
+              "isRequired": true,
+              "inputType": "number"
+            },
+            {
+              "name": "सर्वे में चिन्हित आंगन बाड़ी  में प्रवेश योग्य बच्चो की संख्या ",
+              "cellType": "text",
+              "isRequired": true,
+              "inputType": "number"
+            },
+            {
+              "name": " आंगन बाड़ी से विद्यालय कि प्रथम कक्षा में प्रवेश योग्य बच्चो की संख्या ",
+              "cellType": "text",
+              "isRequired": true,
+              "inputType": "number"
+            },
+            {
+              "name": "सर्वे में चिन्हित उपरोक्त सभी में cwsn प्रवेश योग्य बच्चो की संख्या ",
+              "cellType": "text",
+              "isRequired": true,
+              "inputType": "number"
+            }
+          ],
+          "columnLayout": "horizontal",
+          "detailPanelMode": "underRow",
+          "horizontalScroll": true,
+          "columnMinWidth": "100px",
+          "minRowCount": 1,
+          "confirmDelete": true,
+          "confirmDeleteText": "Are you sure?"
+        }
+      ]
+    }
+  ],
+  "completeText": "Submit",
+  "showPreviewBeforeComplete": "showAnsweredQuestions"
+}
+function sendDataToServer(survey) {
+    //send Ajax request to your web server.
+    //alert("The results are:" + JSON.stringify(survey.data));
+	
+	var data = survey.data;
+	try {
+					
+					for (i = 0; i < data.question2.length; i++) {
+					var q = data.question2[i];
+						console.log(q);
+                    $.post( "https://docs.google.com/forms/u/0/d/e/1FAIpQLSdR7aTfCEfNefriSXpmKD6ccLT6QEVbGXtnGVoAWiig7w6MSA/formResponse",
+                    {
+                    "entry.2081806952": data.date,
+					"entry.1997249446": data.peeoName,
+					"entry.1341436243": data.RevenueVillage ,
+					"entry.1022373984": q["Family"],
+					"entry.791177180": q["कुल परिवारों की संख्या"],
+					"entry.510921074": q["सर्वे में समिल्लत कुल परिवारों की संख्या"],
+					"entry.2111580312": q["सर्वे में चिन्हित विद्यालय में प्रवेश योग्य बच्चो की संख्या"],
+					"entry.1681330709": q["सर्वे में चिन्हित आंगन बाड़ी  में प्रवेश योग्य बच्चो की संख्या"],
+					"entry.79184850": q["आंगन बाड़ी से विद्यालय कि प्रथम कक्षा में प्रवेश योग्य बच्चो की संख्या"],
+					"entry.51442607": q["सर्वे में चिन्हित उपरोक्त सभी में cwsn प्रवेश योग्य बच्चो की संख्या"]
+                    }
+                    );
+					}
+                    }
+        catch(e) {
+            console.log(e);                
+        }
+}
+
+var survey = new Survey.Model(surveyJSON);
+$("#surveyContainer").Survey({
+    model: survey,
+    onComplete: sendDataToServer
+});
+</script>
+</html>
+
